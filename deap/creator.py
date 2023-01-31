@@ -24,7 +24,7 @@ programming, evolution strategies, particle swarm optimizers, and many more.
 import array
 import copy
 import warnings
-import copy_reg
+import copyreg
 
 class_replacers = {}
 """Some classes in Python's standard library as well as third party library
@@ -128,7 +128,7 @@ class MetaCreator(type):
         return (meta_create, cls.reduce_args)
 
 
-copy_reg.pickle(MetaCreator, MetaCreator.__reduce__)
+copyreg.pickle(MetaCreator, MetaCreator.__reduce__)
 
 
 def meta_create(name, base, dct):
